@@ -1,6 +1,6 @@
 #!/bin/bash
 
-url="www.dcis.net"
+url="www.dcis.net/sldfkjhasdlfjkh.html"
 status_code=$(curl -o /dev/null --silent --head --write-out '%{http_code}\n' $url)
 date=`date`
 
