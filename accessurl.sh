@@ -1,2 +1,2 @@
 #!/bin/bash
-curl http://dcis.net/super.html
+curl -I http://dcis.net/super.html
