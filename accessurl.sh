@@ -7,5 +7,5 @@ date=`date`
 if [ $status_code -ne "200" ]
 then
         echo "status check failed"
-        #You can add further actions here
+        exit 1
 fi
