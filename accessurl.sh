@@ -6,6 +6,6 @@ date=`date`
 
 if [ $status_code -ne "200" ]
 then
-        echo "status check failed"
+        echo "Status check failed"
         exit 1
 fi
