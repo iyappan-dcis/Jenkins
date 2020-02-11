@@ -1,5 +1,5 @@
 ---
-- hosts: idau::frau:iduk
+- hosts: idau
   tasks:
    - name: Checking free memory
      command: free -m
