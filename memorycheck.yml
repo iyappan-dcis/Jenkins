@@ -1,0 +1,17 @@
+---
+- hosts: idau::frau:iduk
+  tasks:
+   - name: Checking free memory
+     command: free -m
+     register: shell_result
+     args:
+       warn: false
+   - debug:
+       var: shell_result.stdout_lines
+   - name: Checking disk space
+     command: df -H
+     register: shell_result
+     args:
+       warn: false
+   - debug:
+       var: shell_result.stdout_lines
