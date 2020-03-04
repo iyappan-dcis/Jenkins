@@ -28,5 +28,5 @@
        attach:
        - /tmp/404.csv
        - /tmp/500.csv
-     delegate_to: "{{ inventory_hostname }}"
+     delegate_to: localhost
      
