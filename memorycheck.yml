@@ -17,10 +17,10 @@
 #       var: shell_result.stdout_lines
    - name: Send the latest report
      mail:
-       host: email-smtp.us-west-2.amazonaws.com
+       host: outbound.formsdirect.net
        port: 587
-       username: AKIAJE3U5UNC7JZP26AQ
-       password: Ah28BAq2BV9fy3YNyi7u5MxD8xU/6FvRvzjsa718YR/5
+       username: phoneburner
+       password: CzJg67dB
        from: Jenkins <jenkins@formsdirect.net>
        to: Iyappan Joghee <iyappan@dcis.net>
        subject: Reports Attached
