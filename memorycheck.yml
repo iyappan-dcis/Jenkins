@@ -2,14 +2,14 @@
 - hosts: idau
   tasks:
    - name: Checking 404's on Nginx
-     shell: zgrep '\[01\/Mar\/2020\:' /var/log/nginx/* | grep 'HTTP/1.1\" 404' | awk -F '"' '{print $2}' | awk -F ' ' '{print $2}' | sort | uniq -c
+     shell: zgrep '\[01\/Mar\/2020\:03\:' /var/log/nginx/* | grep 'HTTP/1.1\" 404' | awk -F '"' '{print $2}' | awk -F ' ' '{print $2}' | sort | uniq -c
      register: shell_result
      args:
        warn: false
    - debug:
        var: shell_result.stdout_lines
    - name: Checking 500's on Nginx
-     shell: zgrep '\[01\/Mar\/2020\:' /var/log/nginx/* | grep 'HTTP/1.1\" 500' | awk -F '"' '{print $2}' | awk -F ' ' '{print $2}' | sort | uniq -c
+     shell: zgrep '\[01\/Mar\/2020\:03\:' /var/log/nginx/* | grep 'HTTP/1.1\" 500' | awk -F '"' '{print $2}' | awk -F ' ' '{print $2}' | sort | uniq -c
      register: shell_result
      args:
        warn: false
