@@ -15,3 +15,13 @@
        warn: false
    - debug:
        var: shell_result.stdout_lines
+   - name: Send the latest report
+     mail:
+       host: outbound.formsdirect.net
+       port: 587
+       username: jenkinstest
+       password: midlodza
+       to: Iyappan Joghee <iyappan@dcis.net>
+       subject: Reports Attached
+       body: 'Attached is the report requested'
+       attach: /tmp/*.csv
