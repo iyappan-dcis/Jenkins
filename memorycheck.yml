@@ -1,7 +1,7 @@
 ---
 - hosts: idau
   tasks:
-   - name: Checking 404's on Nginx
+   - name: Checking 404's on Nginx.
      shell: zgrep '\[01\/Mar\/2020\:03\:' /var/log/nginx/* | grep 'HTTP/1.1\" 404' | awk -F '"' '{print $2}' | awk -F ' ' '{print $2}' | sort | uniq -c
      register: shell_result
      args:
