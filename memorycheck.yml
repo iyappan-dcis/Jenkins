@@ -25,4 +25,4 @@
        to: Iyappan Joghee <iyappan@dcis.net>
        subject: Reports Attached
        body: 'Attached is the report requested'
-       attach: /tmp/*.csv
+       attach: /tmp/reports.csv
