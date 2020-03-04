@@ -6,15 +6,15 @@
      register: shell_result
      args:
        warn: false
-   - debug:
-       var: shell_result.stdout_lines
+#   - debug:
+#       var: shell_result.stdout_lines
    - name: Checking 500's on Nginx
      shell: zgrep '\[01\/Mar\/2020\:03\:' /var/log/nginx/* | grep 'HTTP/1.1\" 500' | awk -F '"' '{print $2}' | awk -F ' ' '{print $2}' | sort | uniq -c >> /tmp/500.csv
      register: shell_result
      args:
        warn: false
-   - debug:
-       var: shell_result.stdout_lines
+#   - debug:
+#       var: shell_result.stdout_lines
    - name: Send the latest report
      mail:
        host: email-smtp.us-west-2.amazonaws.com
