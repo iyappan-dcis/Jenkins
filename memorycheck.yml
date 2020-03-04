@@ -17,10 +17,11 @@
        var: shell_result.stdout_lines
    - name: Send the latest report
      mail:
-       host: outbound.formsdirect.net
+       host: email-smtp.us-west-2.amazonaws.com
        port: 587
-       username: jenkinstest
-       password: midlodza
+       username: AKIAJE3U5UNC7JZP26AQ
+       password: Ah28BAq2BV9fy3YNyi7u5MxD8xU/6FvRvzjsa718YR/5
+       from: Jenkins <jenkins@formsdirect.net>
        to: Iyappan Joghee <iyappan@dcis.net>
        subject: Reports Attached
        body: 'Attached is the report requested'
