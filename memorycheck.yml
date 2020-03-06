@@ -25,6 +25,5 @@
        to: Iyappan Joghee <iyappan@dcis.net>
        subject: Reports Attached
        body: 'Attached is the report requested'
-       attach: /tmp/404.csv
-     delegate_to: "{{ inventory_hostname }}"
+       attach: /tmp/404.csv /tmp/500.csv
      
