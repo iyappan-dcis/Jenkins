@@ -26,4 +26,5 @@
        subject: Reports Attached
        body: 'Attached is the report requested'
        attach: /tmp/404.csv /tmp/500.csv
+       secure: never
      
